@@ -1,0 +1,33 @@
+# Xcode / Swift
+DerivedData/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+build/
+.build/
+.swiftpm/
+Packages/
+xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Secrets / env
+.env
+.env.*
+*.p12
+*.mobileprovision
+AuthKey_*.p8
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python helper
+__pycache__/
+*.pyc

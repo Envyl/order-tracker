@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4DEAE9A71A6437195AD9545 /* OrderTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7126759844D2A84188ABB /* OrderTrackerApp.swift */; };
+		7E3B3F8369AF4F60A1B23EF9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D720A7E079B47ECA6A43C76 /* RootView.swift */; };
+		C9F1D652373C4149AE9DBE95 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169521CC92547D68817EB46 /* AppServices.swift */; };
+		61106F098D94425AA65E29A5 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB789006B42F450ABFEB3567 /* Enums.swift */; };
+		53FEF48D4A6B473286E232E6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2AA6A1624E461191D957EB /* Models.swift */; };
+		5F89DCDA42584F56A3275BB7 /* SwiftDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B67D9483336404694265451 /* SwiftDataModels.swift */; };
+		4571B2F324164C4CB154695C /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F68BD8EA84956B550D3A2 /* PersistenceController.swift */; };
+		AAAD5553057E4CAB9D351635 /* ConnectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A6FC723A4EC4809A831E /* ConnectionRepository.swift */; };
+		7F2CC1EA67934CEDAE119D2D /* OrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150020C0B80E4750A1A22D55 /* OrderRepository.swift */; };
+		B4A625021FA14C7DBE554C6C /* KeychainSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA2CF20C0B43529F64A0F2 /* KeychainSessionStore.swift */; };
+		5E3DAF8E87E04C41AAE0FDAC /* RedactingLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39621154B7664BC08CDF0BDD /* RedactingLog.swift */; };
+		52DD6EDB96034C8B89D7A59D /* ProviderAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC62059D3643EC8535DDF7 /* ProviderAdapter.swift */; };
+		5B54944E060C4223A284B96C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD350F4F2B58476D9C4BFC41 /* HTTPClient.swift */; };
+		24CFE7BC378F48C78C4E4C4A /* ProviderFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF11605AA8C4CDDBFC55388 /* ProviderFixtures.swift */; };
+		4C3EAA9B9C034C119E1B7811 /* RefreshOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F1370118A4348960DF415 /* RefreshOrchestrator.swift */; };
+		28E66E47B3284E9BA0F1AFB8 /* ProviderRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C49D3B657456286AEEA3E /* ProviderRegistry.swift */; };
+		0AF5CF4EF7984D8792F81EEA /* WildberriesAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DA0AFF9BE4440AA45E084A /* WildberriesAdapter.swift */; };
+		C98E5D3EADF94EF392EFFF47 /* WildberriesStatusMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDC4EE63AC4545B106B9AE /* WildberriesStatusMapper.swift */; };
+		936FE13337EC4EDB9A32A3B4 /* AliExpressAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698544AC6A7148C18430C008 /* AliExpressAdapter.swift */; };
+		C5E65C213E424889BAC568E3 /* AliExpressStatusMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0E2746DE4365A7F99E4F /* AliExpressStatusMapper.swift */; };
+		0CFB941FF1F441B6A7D43ECB /* CDEKAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E757F78054CF883003D69 /* CDEKAdapter.swift */; };
+		398C01B1AA3F49E58FBED110 /* CDEKStatusMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C97ECA2C4F6688DABB90 /* CDEKStatusMapper.swift */; };
+		A4A1C5C60C7E4815AB1459A7 /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED9C4AE5DA64C0BB5A1E291 /* ConnectionsView.swift */; };
+		42DA7C1B6CAC424C9D87E448 /* ConnectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE03D74ECCB4CFE9AB59DC9 /* ConnectionsViewModel.swift */; };
+		2555AA9DF457449BB2C33B69 /* WildberriesConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CDE1B1AB71472E9BA21DC0 /* WildberriesConnectView.swift */; };
+		CA992CED867C40D9BB1C22F7 /* AliExpressConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB08305DFBB482198AED8C9 /* AliExpressConnectView.swift */; };
+		A3C9F6B47FDD409CBEC26CD2 /* CDEKConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82F22187C849BB8A88C2FD /* CDEKConnectView.swift */; };
+		5B429F7472D9499DA8C0EE7C /* OrdersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DB87BB7D24BECBFEBBDB5 /* OrdersListView.swift */; };
+		3DAEA2225C45435C91197E61 /* OrdersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EF3E3D8B04A9FAEE8BA72 /* OrdersListViewModel.swift */; };
+		370AE13638E1415195EA810D /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DA6D095F94D24A5C73576 /* OrderRowView.swift */; };
+		2F7CD49D0C6E442D9382C24F /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF613C3AFAA5492BBDE7D585 /* OrderDetailView.swift */; };
+		F5F97C374F4243E2BD7A251A /* OrderDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94CE2B40A94C2EA021E8ED /* OrderDetailViewModel.swift */; };
+		44BF840C83A542E6B0851773 /* ProviderStatusBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289A111DCC924E1F940F2F6B /* ProviderStatusBanner.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B77E50E9EC884C8C9DD55D60 /* OrderTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB7126759844D2A84188ABB /* OrderTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackerApp.swift; sourceTree = "<group>"; };
+		7D720A7E079B47ECA6A43C76 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		1169521CC92547D68817EB46 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		AB789006B42F450ABFEB3567 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		2D2AA6A1624E461191D957EB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		8B67D9483336404694265451 /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
+		0C6F68BD8EA84956B550D3A2 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		4731A6FC723A4EC4809A831E /* ConnectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRepository.swift; sourceTree = "<group>"; };
+		150020C0B80E4750A1A22D55 /* OrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepository.swift; sourceTree = "<group>"; };
+		A2EA2CF20C0B43529F64A0F2 /* KeychainSessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSessionStore.swift; sourceTree = "<group>"; };
+		39621154B7664BC08CDF0BDD /* RedactingLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedactingLog.swift; sourceTree = "<group>"; };
+		97DC62059D3643EC8535DDF7 /* ProviderAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderAdapter.swift; sourceTree = "<group>"; };
+		AD350F4F2B58476D9C4BFC41 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FCF11605AA8C4CDDBFC55388 /* ProviderFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderFixtures.swift; sourceTree = "<group>"; };
+		E64F1370118A4348960DF415 /* RefreshOrchestrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshOrchestrator.swift; sourceTree = "<group>"; };
+		CA9C49D3B657456286AEEA3E /* ProviderRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRegistry.swift; sourceTree = "<group>"; };
+		D4DA0AFF9BE4440AA45E084A /* WildberriesAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesAdapter.swift; sourceTree = "<group>"; };
+		DFCDC4EE63AC4545B106B9AE /* WildberriesStatusMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesStatusMapper.swift; sourceTree = "<group>"; };
+		698544AC6A7148C18430C008 /* AliExpressAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliExpressAdapter.swift; sourceTree = "<group>"; };
+		0DAD0E2746DE4365A7F99E4F /* AliExpressStatusMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliExpressStatusMapper.swift; sourceTree = "<group>"; };
+		802E757F78054CF883003D69 /* CDEKAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEKAdapter.swift; sourceTree = "<group>"; };
+		1AD9C97ECA2C4F6688DABB90 /* CDEKStatusMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEKStatusMapper.swift; sourceTree = "<group>"; };
+		7ED9C4AE5DA64C0BB5A1E291 /* ConnectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
+		9BE03D74ECCB4CFE9AB59DC9 /* ConnectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsViewModel.swift; sourceTree = "<group>"; };
+		A9CDE1B1AB71472E9BA21DC0 /* WildberriesConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesConnectView.swift; sourceTree = "<group>"; };
+		1DB08305DFBB482198AED8C9 /* AliExpressConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliExpressConnectView.swift; sourceTree = "<group>"; };
+		DD82F22187C849BB8A88C2FD /* CDEKConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEKConnectView.swift; sourceTree = "<group>"; };
+		393DB87BB7D24BECBFEBBDB5 /* OrdersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListView.swift; sourceTree = "<group>"; };
+		D25EF3E3D8B04A9FAEE8BA72 /* OrdersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewModel.swift; sourceTree = "<group>"; };
+		789DA6D095F94D24A5C73576 /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
+		FF613C3AFAA5492BBDE7D585 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		9A94CE2B40A94C2EA021E8ED /* OrderDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewModel.swift; sourceTree = "<group>"; };
+		289A111DCC924E1F940F2F6B /* ProviderStatusBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderStatusBanner.swift; sourceTree = "<group>"; };
+		E3BDAF822A6E4731A47D3EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		F96FA93DEB9C4CD79F69A59D = {
+			isa = PBXGroup;
+			children = (
+				245FFF17185A46B7A81DA1D8 /* App */,
+				09787A47A578487D93428DBA /* Domain */,
+				9619F75EDBBF4F56A332282A /* Persistence */,
+				D74C80D62A554F969D1E254B /* Security */,
+				FDB4164378424A0F87C3A246 /* Providers */,
+				B00E9272BA2142FCB4F19EFB /* Features */,
+				CAC543A2B7194FEE8DAB8CFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAC543A2B7194FEE8DAB8CFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B77E50E9EC884C8C9DD55D60 /* OrderTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		245FFF17185A46B7A81DA1D8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FAB7126759844D2A84188ABB /* OrderTrackerApp.swift */,
+				7D720A7E079B47ECA6A43C76 /* RootView.swift */,
+				1169521CC92547D68817EB46 /* AppServices.swift */,
+				E3BDAF822A6E4731A47D3EBD /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		09787A47A578487D93428DBA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AB789006B42F450ABFEB3567 /* Enums.swift */,
+				2D2AA6A1624E461191D957EB /* Models.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		9619F75EDBBF4F56A332282A /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				8B67D9483336404694265451 /* SwiftDataModels.swift */,
+				0C6F68BD8EA84956B550D3A2 /* PersistenceController.swift */,
+				4731A6FC723A4EC4809A831E /* ConnectionRepository.swift */,
+				150020C0B80E4750A1A22D55 /* OrderRepository.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		D74C80D62A554F969D1E254B /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				A2EA2CF20C0B43529F64A0F2 /* KeychainSessionStore.swift */,
+				39621154B7664BC08CDF0BDD /* RedactingLog.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		FDB4164378424A0F87C3A246 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				DB5D37DF123F42A6B31C2ACE /* Wildberries */,
+				D8F34B7919E74B5A8BC3EF9D /* AliExpress */,
+				EACF39FF9317493F8883982D /* CDEK */,
+				97DC62059D3643EC8535DDF7 /* ProviderAdapter.swift */,
+				AD350F4F2B58476D9C4BFC41 /* HTTPClient.swift */,
+				FCF11605AA8C4CDDBFC55388 /* ProviderFixtures.swift */,
+				E64F1370118A4348960DF415 /* RefreshOrchestrator.swift */,
+				CA9C49D3B657456286AEEA3E /* ProviderRegistry.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		B00E9272BA2142FCB4F19EFB /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B33C7EB91F8A4B0294508F6B /* Connections */,
+				82E812CC09C24ECC9F815E40 /* Orders */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		DB5D37DF123F42A6B31C2ACE /* Wildberries */ = {
+			isa = PBXGroup;
+			children = (
+				D4DA0AFF9BE4440AA45E084A /* WildberriesAdapter.swift */,
+				DFCDC4EE63AC4545B106B9AE /* WildberriesStatusMapper.swift */,
+			);
+			path = Wildberries;
+			sourceTree = "<group>";
+		};
+		D8F34B7919E74B5A8BC3EF9D /* AliExpress */ = {
+			isa = PBXGroup;
+			children = (
+				698544AC6A7148C18430C008 /* AliExpressAdapter.swift */,
+				0DAD0E2746DE4365A7F99E4F /* AliExpressStatusMapper.swift */,
+			);
+			path = AliExpress;
+			sourceTree = "<group>";
+		};
+		EACF39FF9317493F8883982D /* CDEK */ = {
+			isa = PBXGroup;
+			children = (
+				802E757F78054CF883003D69 /* CDEKAdapter.swift */,
+				1AD9C97ECA2C4F6688DABB90 /* CDEKStatusMapper.swift */,
+			);
+			path = CDEK;
+			sourceTree = "<group>";
+		};
+		B33C7EB91F8A4B0294508F6B /* Connections */ = {
+			isa = PBXGroup;
+			children = (
+				7ED9C4AE5DA64C0BB5A1E291 /* ConnectionsView.swift */,
+				9BE03D74ECCB4CFE9AB59DC9 /* ConnectionsViewModel.swift */,
+				A9CDE1B1AB71472E9BA21DC0 /* WildberriesConnectView.swift */,
+				1DB08305DFBB482198AED8C9 /* AliExpressConnectView.swift */,
+				DD82F22187C849BB8A88C2FD /* CDEKConnectView.swift */,
+			);
+			path = Connections;
+			sourceTree = "<group>";
+		};
+		82E812CC09C24ECC9F815E40 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				393DB87BB7D24BECBFEBBDB5 /* OrdersListView.swift */,
+				D25EF3E3D8B04A9FAEE8BA72 /* OrdersListViewModel.swift */,
+				789DA6D095F94D24A5C73576 /* OrderRowView.swift */,
+				FF613C3AFAA5492BBDE7D585 /* OrderDetailView.swift */,
+				9A94CE2B40A94C2EA021E8ED /* OrderDetailViewModel.swift */,
+				289A111DCC924E1F940F2F6B /* ProviderStatusBanner.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		431E47EE2CCF431091259D3A /* OrderTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BF51DA0A3AB49D08A9ECCBD /* Build configuration list for PBXNativeTarget "OrderTracker" */;
+			buildPhases = (
+				8FDEFC672D424A6088CA87B5 /* Sources */,
+				C0A7A2D2DE6D47AF888880C7 /* Frameworks */,
+				B53DD6C26F2443A1B2E45A24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OrderTracker;
+			productName = OrderTracker;
+			productReference = B77E50E9EC884C8C9DD55D60 /* OrderTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CD4311CDD14476F8D6ADBEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 710780635DAE4931942096B5 /* Build configuration list for PBXProject "OrderTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ru;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+				Base,
+			);
+			mainGroup = F96FA93DEB9C4CD79F69A59D;
+			productRefGroup = CAC543A2B7194FEE8DAB8CFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				431E47EE2CCF431091259D3A /* OrderTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FDEFC672D424A6088CA87B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4DEAE9A71A6437195AD9545 /* OrderTrackerApp.swift in Sources */,
+				7E3B3F8369AF4F60A1B23EF9 /* RootView.swift in Sources */,
+				C9F1D652373C4149AE9DBE95 /* AppServices.swift in Sources */,
+				61106F098D94425AA65E29A5 /* Enums.swift in Sources */,
+				53FEF48D4A6B473286E232E6 /* Models.swift in Sources */,
+				5F89DCDA42584F56A3275BB7 /* SwiftDataModels.swift in Sources */,
+				4571B2F324164C4CB154695C /* PersistenceController.swift in Sources */,
+				AAAD5553057E4CAB9D351635 /* ConnectionRepository.swift in Sources */,
+				7F2CC1EA67934CEDAE119D2D /* OrderRepository.swift in Sources */,
+				B4A625021FA14C7DBE554C6C /* KeychainSessionStore.swift in Sources */,
+				5E3DAF8E87E04C41AAE0FDAC /* RedactingLog.swift in Sources */,
+				52DD6EDB96034C8B89D7A59D /* ProviderAdapter.swift in Sources */,
+				5B54944E060C4223A284B96C /* HTTPClient.swift in Sources */,
+				24CFE7BC378F48C78C4E4C4A /* ProviderFixtures.swift in Sources */,
+				4C3EAA9B9C034C119E1B7811 /* RefreshOrchestrator.swift in Sources */,
+				28E66E47B3284E9BA0F1AFB8 /* ProviderRegistry.swift in Sources */,
+				0AF5CF4EF7984D8792F81EEA /* WildberriesAdapter.swift in Sources */,
+				C98E5D3EADF94EF392EFFF47 /* WildberriesStatusMapper.swift in Sources */,
+				936FE13337EC4EDB9A32A3B4 /* AliExpressAdapter.swift in Sources */,
+				C5E65C213E424889BAC568E3 /* AliExpressStatusMapper.swift in Sources */,
+				0CFB941FF1F441B6A7D43ECB /* CDEKAdapter.swift in Sources */,
+				398C01B1AA3F49E58FBED110 /* CDEKStatusMapper.swift in Sources */,
+				A4A1C5C60C7E4815AB1459A7 /* ConnectionsView.swift in Sources */,
+				42DA7C1B6CAC424C9D87E448 /* ConnectionsViewModel.swift in Sources */,
+				2555AA9DF457449BB2C33B69 /* WildberriesConnectView.swift in Sources */,
+				CA992CED867C40D9BB1C22F7 /* AliExpressConnectView.swift in Sources */,
+				A3C9F6B47FDD409CBEC26CD2 /* CDEKConnectView.swift in Sources */,
+				5B429F7472D9499DA8C0EE7C /* OrdersListView.swift in Sources */,
+				3DAEA2225C45435C91197E61 /* OrdersListViewModel.swift in Sources */,
+				370AE13638E1415195EA810D /* OrderRowView.swift in Sources */,
+				2F7CD49D0C6E442D9382C24F /* OrderDetailView.swift in Sources */,
+				F5F97C374F4243E2BD7A251A /* OrderDetailViewModel.swift in Sources */,
+				44BF840C83A542E6B0851773 /* ProviderStatusBanner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0A7A2D2DE6D47AF888880C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B53DD6C26F2443A1B2E45A24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		41C0722329B1476CB34600F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		81319574514646D3965E1016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A2E3D363D7BF4BCB8CA953CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Order Tracker";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.ordertracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B5A871F1FB4C4B6B836061F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Order Tracker";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.ordertracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		710780635DAE4931942096B5 /* Build configuration list for PBXProject "OrderTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41C0722329B1476CB34600F8 /* Debug */,
+				81319574514646D3965E1016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BF51DA0A3AB49D08A9ECCBD /* Build configuration list for PBXNativeTarget "OrderTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2E3D363D7BF4BCB8CA953CE /* Debug */,
+				B5A871F1FB4C4B6B836061F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CD4311CDD14476F8D6ADBEA /* Project object */;
+}

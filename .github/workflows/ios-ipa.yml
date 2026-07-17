@@ -1,0 +1,34 @@
+name: iOS IPA (secondary)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "ios/**"
+      - ".github/workflows/ios-ipa.yml"
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build archive without signing
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project ios/OrderTracker.xcodeproj \
+            -scheme OrderTracker \
+            -configuration Release \
+            -sdk iphoneos \
+            -archivePath build/OrderTracker.xcarchive \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            archive
+          mkdir -p build/ipa/Payload
+          cp -R build/OrderTracker.xcarchive/Products/Applications/OrderTracker.app build/ipa/Payload/
+          (cd build/ipa && zip -r ../OrderTracker.ipa Payload)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OrderTracker-ipa
+          path: build/OrderTracker.ipa
