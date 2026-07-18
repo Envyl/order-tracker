@@ -21,10 +21,12 @@ workflows:
       - name: Build IPA (unsigned/dev style for Sideloadly re-sign)
         script: |
           set -e
-          # working_directory is ios/; artifacts go back to repo clone root
+          # Artifact paths: with working_directory=ios, relative globs are under ios/.
+          # Also publish under $CM_BUILD_DIR/build with absolute artifact entries.
           ARCHIVE_PATH="$CM_BUILD_DIR/build/OrderTracker.xcarchive"
           IPA_DIR="$CM_BUILD_DIR/build/ipa"
-          mkdir -p "$IPA_DIR/Payload"
+          LOCAL_BUILD_DIR="$CM_BUILD_DIR/ios/build"
+          mkdir -p "$IPA_DIR/Payload" "$LOCAL_BUILD_DIR"
           xcodebuild \
             -project "$XCODE_PROJECT" \
             -scheme "$XCODE_SCHEME" \
@@ -41,8 +43,12 @@ workflows:
             cd "$IPA_DIR"
             zip -r "$CM_BUILD_DIR/build/OrderTracker.ipa" Payload
           )
-          ls -la "$CM_BUILD_DIR/build/OrderTracker.ipa"
+          cp "$CM_BUILD_DIR/build/OrderTracker.ipa" "$LOCAL_BUILD_DIR/OrderTracker.ipa"
+          ls -la "$CM_BUILD_DIR/build/OrderTracker.ipa" "$LOCAL_BUILD_DIR/OrderTracker.ipa"
     artifacts:
+      # Absolute paths (reliable with working_directory)
+      - $CM_BUILD_DIR/build/OrderTracker.ipa
+      - $CM_BUILD_DIR/build/OrderTracker.xcarchive
+      # Relative to working_directory (ios/)
       - build/OrderTracker.ipa
-      - build/OrderTracker.xcarchive/**/*
       - /tmp/xcodebuild_logs/*.log
