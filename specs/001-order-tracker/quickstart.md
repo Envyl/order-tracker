@@ -20,7 +20,9 @@ Build IPA in the cloud → install from Windows with Sideloadly.
 ### A1. Codemagic (primary)
 
 1. Push repo to Git; connect to Codemagic.
-2. Use root `codemagic.yaml` (workflow `order-tracker-ipa`).
+2. App is under **`ios/`** (monorepo). Either:
+   - Use **`codemagic.yaml`** at repo root (workflow `order-tracker-ipa`, `working_directory: ios`), or
+   - In the UI scan wizard set **Project path = `ios`**, type **iOS**, project `OrderTracker.xcodeproj`, scheme `OrderTracker`.
 3. Download artifact `OrderTracker.ipa`.
 4. Continue to **B**.
 

@@ -1,36 +1,48 @@
 workflows:
   order-tracker-ipa:
     name: Order Tracker IPA
+    # Native iOS app lives under ios/ (repo root also has specs/, .specify/, etc.)
+    working_directory: ios
     max_build_duration: 60
     instance_type: mac_mini_m2
     environment:
       xcode: latest
       vars:
-        XCODE_PROJECT: "ios/OrderTracker.xcodeproj"
+        XCODE_PROJECT: "OrderTracker.xcodeproj"
         XCODE_SCHEME: "OrderTracker"
         BUNDLE_ID: "com.personal.ordertracker"
     scripts:
+      - name: Show Xcode project
+        script: |
+          set -e
+          pwd
+          ls -la
+          xcodebuild -list -project "$XCODE_PROJECT"
       - name: Build IPA (unsigned/dev style for Sideloadly re-sign)
         script: |
           set -e
-          cd "$CM_BUILD_DIR"
+          # working_directory is ios/; artifacts go back to repo clone root
+          ARCHIVE_PATH="$CM_BUILD_DIR/build/OrderTracker.xcarchive"
+          IPA_DIR="$CM_BUILD_DIR/build/ipa"
+          mkdir -p "$IPA_DIR/Payload"
           xcodebuild \
             -project "$XCODE_PROJECT" \
             -scheme "$XCODE_SCHEME" \
             -configuration Release \
             -sdk iphoneos \
-            -archivePath "$CM_BUILD_DIR/build/OrderTracker.xcarchive" \
+            -archivePath "$ARCHIVE_PATH" \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
             archive
-          mkdir -p "$CM_BUILD_DIR/build/ipa/Payload"
-          cp -R "$CM_BUILD_DIR/build/OrderTracker.xcarchive/Products/Applications/OrderTracker.app" \
-            "$CM_BUILD_DIR/build/ipa/Payload/"
+          cp -R "$ARCHIVE_PATH/Products/Applications/OrderTracker.app" \
+            "$IPA_DIR/Payload/"
           (
-            cd "$CM_BUILD_DIR/build/ipa"
+            cd "$IPA_DIR"
             zip -r "$CM_BUILD_DIR/build/OrderTracker.ipa" Payload
           )
+          ls -la "$CM_BUILD_DIR/build/OrderTracker.ipa"
     artifacts:
       - build/OrderTracker.ipa
       - build/OrderTracker.xcarchive/**/*
+      - /tmp/xcodebuild_logs/*.log
